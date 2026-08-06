@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sqflite/sqflite.dart';
 import 'package:dr_tragic_mfa/core/database/database_helper.dart';
 
 class SettingsProvider extends ChangeNotifier {
