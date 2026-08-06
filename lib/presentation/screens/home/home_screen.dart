@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:dr_tragic_mfa/presentation/providers/subject_provider.dart';
 import 'package:dr_tragic_mfa/presentation/widgets/subject_card.dart';
 import 'package:dr_tragic_mfa/presentation/screens/search/search_screen.dart';
+import 'package:dr_tragic_mfa/presentation/widgets/bottom_nav.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
