@@ -147,6 +147,19 @@ class QuizProvider extends ChangeNotifier {
 
   bool isBookmarked(int questionId) => _bookmarkedQuestions.contains(questionId);
 
+  // Answer state helpers (used by quiz_screen.dart)
+  bool isAnswered(int index) => _userAnswers.containsKey(index);
+
+  bool isSelected(int index, String option) => _userAnswers[index] == option;
+
+  String? selectedOption(int index) => _userAnswers[index];
+
+  // Result summary (used by quiz_result_screen.dart)
+  int get correctCount => _correctnessMap.values.where((v) => v).length;
+
+  int get incorrectCount =>
+      _userAnswers.length - correctCount;
+
   // Timer management
   void startTimer(int seconds) {
     _remainingSeconds = seconds;
